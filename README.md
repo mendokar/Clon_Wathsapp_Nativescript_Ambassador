@@ -1,0 +1,2 @@
+# Clon_Wathsapp_Nativescript_Ambassador
+Repositorio del proyecto para el equipo Nativescript_Latam
