@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "82100383390",
+    "firebase_url": "https://tinchat-94de6.firebaseio.com",
+    "project_id": "tinchat-94de6",
+    "storage_bucket": "tinchat-94de6.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:82100383390:android:c1752dbeddf1b73b",
+        "android_client_info": {
+          "package_name": "embajadores.nativescript.TinChat"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "82100383390-7ltcomsep51igjep39abqf845qf5pun8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAADVyjeHcj17vUzAxoO3bqxkBBJh0vfPg"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
