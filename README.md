@@ -12,3 +12,7 @@ Se realiza commit de los cambios de la aplicación agregando formas de login, re
 Tomar la carpeta app y descomprimirla, crear una aplicacion nueva con el nombre de TinChat con angular y copiar la carpeta app en la que se crea nueva.
 
 Cambiarle el nombre del Id de la aplicacion por "embajadores.nativescript.TinChat"
+
+27/07/2017
+
+Se realizan cambios en la validacion de la creacion del usuario y la validacion de datos para el inicio de sesion
