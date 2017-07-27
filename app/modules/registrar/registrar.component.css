@@ -1,0 +1,56 @@
+*{
+font-size: 15;
+font-family: Arial, Helvetica, sans-serif;
+}
+.form{
+    margin-top:50;
+    margin-left: 30;
+    margin-right: 30;
+}
+
+.o{
+    text-align: center;
+    margin:5;
+}
+
+Label{
+    font-size: 15;
+    color: white;
+}
+TextField{
+    margin:5;
+    color:white;
+}
+
+.registrar{
+    border-radius: 15;
+    border-width: 0.6;
+    margin:5;
+    background-color: #002aff;
+    font-size: 20;
+    color:white;
+}
+
+.iniciar{
+    border-radius: 15;
+    border-width: 0.6;
+    margin-top:15;
+    margin-bottom:15;
+    background-color: #002aff;
+    font-size: 20;
+}
+
+.titulo{
+    background-color: azure;
+    text-align: center;
+    align-content: center;
+}
+
+
+.lbl{
+    text-align: center;
+}
+.redes{
+    align-content: center;
+    margin: 30;
+}
