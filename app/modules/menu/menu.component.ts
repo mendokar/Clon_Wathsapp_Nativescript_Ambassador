@@ -27,8 +27,8 @@ export class MenuComponent extends Observable {
 	constructor(private routEx:RouterExtensions) {
 		super();
 
-		var img = new Image();
-		img.src = "~/apple.jpg";
+		var img = new ImageSource();
+		
 
 		TnsSideDrawer.build({
 			templates: [{
@@ -56,7 +56,6 @@ export class MenuComponent extends Observable {
 			context: this,
 			backgroundColor:new Color("#70b7fe"),
 			headerBackgroundColor:new Color("#2793ff"),
-			logoImage:null,
 		});
 
 		
