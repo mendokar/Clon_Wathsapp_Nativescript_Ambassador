@@ -16,3 +16,7 @@ Cambiarle el nombre del Id de la aplicacion por "embajadores.nativescript.TinCha
 27/07/2017
 
 Se realizan cambios en la validacion de la creacion del usuario y la validacion de datos para el inicio de sesion
+
+30/07/2017
+
+Se realizan cambios en el inicio de sesion con servicio de Google y se crea el menu desplegable.
