@@ -20,3 +20,7 @@ Se realizan cambios en la validacion de la creacion del usuario y la validacion 
 30/07/2017
 
 Se realizan cambios en el inicio de sesion con servicio de Google y se crea el menu desplegable.
+
+23/08/2017
+
+Se realizan la creacion de la funcion de de event listener para validar si se escucha el cambio en la tabla users
