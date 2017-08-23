@@ -11,3 +11,18 @@
     font-size: 20;
     color:greenyellow;
 }
+
+NavigationButton{
+    height: 35;
+    width: 35;
+}
+
+icon{
+    height: 35;
+    width: 35;
+}
+
+.menu{
+    height: 35;
+    width: 35;
+}

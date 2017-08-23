@@ -1,5 +1,5 @@
 import { Component } from "@angular/core";
-import { NavigationExtras} from "@angular/router";
+import { NavigationExtras } from "@angular/router";
 import { Page } from "ui/page";
 import { TouchGestureEventData } from "tns-core-modules/ui/gestures/gestures";
 import { Button } from "ui/button";
@@ -11,6 +11,8 @@ import firebase = require("nativescript-plugin-firebase");
 import * as frameModule from "tns-core-modules/ui/frame";
 
 import { RegistroUsuario } from "./user";
+
+import { LoadingIndicator} from "nativescript-loading-indicator";
 
 @Component({
     selector: "app-login",
@@ -24,15 +26,19 @@ export class LoginComponent {
     email: any;
 
     usuario: RegistroUsuario;
+    loading:LoadingIndicator
     // Your TypeScript logic goes here
 
     public isTurnedOn: Boolean = false;
     public mostrarPass: Boolean = true;
 
-    constructor(private page: Page, public routEx: RouterExtensions) {
+    constructor(private page: Page, private routEx: RouterExtensions) {
         page.actionBarHidden = true;
 
         this.usuario = new RegistroUsuario();
+        this.loading= new LoadingIndicator();
+
+        
     }
 
 
@@ -63,26 +69,29 @@ export class LoginComponent {
 
     public pantallaRegistrar() {
 
-        let navigationExtras: NavigationExtras ={
-        queryParams:{
-            "usuario":this.usuario.email
+        let navigationExtras: NavigationExtras = {
+            queryParams: {
+                "usuario": this.usuario.email
+            }
         }
-    }
         console.log(this.usuario.email);
         this.routEx.navigate(["registrar"], {
-             transition: {
+            transition: {
                 name: "slideTop",
                 duration: 500,
                 curve: "linear"
             }
-        }
 
+        }
+        
         )
+    this.loading.hide();
 
     }
 
     public pantallaMenu() {
-        this.routEx.navigate(["menu"], {clearHistory:true,
+        this.routEx.navigate(["menu"], {
+            clearHistory: true,
             transition: {
                 name: "slideTop",
                 duration: 500,
@@ -94,7 +103,7 @@ export class LoginComponent {
     }
 
     public reaizarLogin() {
-        
+
         this.email = this.usuario.email;
         this.passwo = this.usuario.pass;
 
@@ -163,6 +172,66 @@ export class LoginComponent {
                 );
         }
 
+    }
+
+
+    loginGmail() {
+        this.mostrarLoading();
+        //alert("Aqui se registra con Gmail");
+        firebase.login({
+            type: firebase.LoginType.GOOGLE,
+            // Optional 
+
+        }).then(
+             (result) =>{
+                JSON.stringify(result.email);
+                console.log(result.uid);
+                console.log(result.email);
+                this.pantallaMenu();
+            },
+             (errorMessage) => {
+                console.log(errorMessage);
+            }
+            );
+    }
+
+    loginFacebook() {
+        //alert("Aqui se registra con Facebook");
+        firebase.login({
+            type: firebase.LoginType.FACEBOOK,
+            // Optional
+            facebookOptions: {
+                // defaults to ['public_profile', 'email']
+                scope: ['public_profile', 'email']
+            }
+        }).then(
+            function (result) {
+                JSON.stringify(result);
+            },
+            function (errorMessage) {
+                console.log(errorMessage);
+            }
+            );
+    }
+
+    mostrarLoading(){
+        var options = {
+  message: 'Loading...',
+  progress: 0.65,
+  android: {
+    indeterminate: true,
+    cancelable: false,
+    max: 100,
+    progressNumberFormat: "%1d/%2d",
+    progressPercentFormat: 0.53,
+    progressStyle: 1,
+    secondaryProgress: 1
+  }
+}
+        this.loading.hide();
+    }
+    ocultarLoading(){
+        this.loading.show();
     }
 
 

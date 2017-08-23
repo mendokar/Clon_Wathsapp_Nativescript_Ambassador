@@ -15,7 +15,13 @@
                         <Label class="mostrar" row="0" col="0" text="Mostrar Contraseña"></Label>
                     </GridLayout>
                     <Button text="Inicia Sesión" class="iniciar" (touch)="onTouchButton($event)" (tap)="pantallaMenu()"></Button>
-                    <Label text="O" class="o"></Label>
+                    <Label text="O Iniciar con" class="o"></Label>
+                    <GridLayout rows="*,*" columns="*,*" height="64" class="redes">
+                    <Image row="0" col="0" src="res://facelogo" class="img" (tap)="loginFacebook()"></Image>
+                    <Label text="Facebook" row="1" col="0" class="lbl"></Label>
+                    <Image row="0" col="1" src="res://gmail" class="img" (tap)="loginGmail()"></Image>
+                    <Label text="Gmail" row="1" col="1" class="lbl"></Label>
+                </GridLayout>
                     <Button text="Registrate" class="registrar" (touch)="onTouchButton($event)" (tap)="pantallaRegistrar()"></Button>
                 </StackLayout>
             </Gradient>

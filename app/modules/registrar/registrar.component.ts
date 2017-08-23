@@ -81,6 +81,7 @@ export class RegistrarComponent {
             function (result) {
                 JSON.stringify(result.email);
                 console.log(result.uid);
+                console.log(result.email);
             },
             function (errorMessage) {
                 console.log(errorMessage);
